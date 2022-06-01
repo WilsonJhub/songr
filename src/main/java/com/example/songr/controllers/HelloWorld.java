@@ -29,6 +29,12 @@ public class HelloWorld {
         return "Hello, " + upperCaseName;
     }
 
+    // route to Splash page
+    @GetMapping("/VibeTime")
+    @ResponseBody
+    public static String splashPage(){
+        return splashPage();
+    }
 
 }
 
