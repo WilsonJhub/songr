@@ -7,14 +7,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Locale;
 
 @Controller
-@RequestMapping("/hello")
+
 public class HelloWorld {
 
     // Home route
     // rest the request method
     // Either: set a response body, or use a MODEL!!! Can NOT do both.
 
-
+    // route to Splash page
+    @GetMapping("/VibeTime")
+    public String splashPage(){
+        return "splashPage";
+    }
     @GetMapping("/hi")
     @ResponseBody
     public String getHi() {
@@ -22,20 +26,12 @@ public class HelloWorld {
     }
 
     // route with params
-    @GetMapping("/capitalize/{name}")
+    @GetMapping("/capitalize/{phrase}")
     @ResponseBody
-    public String upperCaseWords(@PathVariable String name){
-        String upperCaseName = name.toUpperCase(Locale.ROOT);
+    public String upperCaseWords(@PathVariable String phrase){
+        String upperCaseName = phrase.toUpperCase(Locale.ROOT);
         return "Hello, " + upperCaseName;
     }
-
-    // route to Splash page
-    @GetMapping("/VibeTime")
-    @ResponseBody
-    public static String splashPage(){
-        return splashPage();
-    }
-
 }
 
 

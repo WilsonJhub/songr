@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--importing from thymeleaf-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+<!--        th:each is iterating through album array located inside AlbumController-->
+    <ul th:each="album : ${albumList}">
+        <li th:text="${album.title}"/>
+
+
+    </ul>
+    </div>
+
+</body>
+</html>
