@@ -9,11 +9,28 @@
 <body>
     <div>
 <!--        th:each is iterating through album array located inside AlbumController-->
+<!--        iterate through repository.-->
     <ul th:each="album : ${albumList}">
         <li th:text="${album.title}"/>
-
-
     </ul>
+    </div>
+    <div>
+        <form action="/addAlbum" method="post">
+            <fieldset>
+                <legend>Add new album</legend>
+                <label for="title">Title</label>
+                <input type="text" name="title">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+                <label for="songCount">SongCount</label>
+                <input type="text" name="songCount">
+                <label for="length">length</label>
+                <input type="text" name="length">
+                <label for="imgUrl">imgUrl</label>
+                <input for="text" name="imgUrl">
+                <input type="submit" value="Add Album">
+            </fieldset>
+        </form>
     </div>
 
 </body>
