@@ -12,6 +12,8 @@
 <!--        iterate through repository.-->
     <ul th:each="album : ${albumList}">
         <li th:text="${album.title}"/>
+<!--        render other props-->
+        <img th:src="${album.imgUrl}"/>
     </ul>
     </div>
     <div>
@@ -19,15 +21,15 @@
             <fieldset>
                 <legend>Add new album</legend>
                 <label for="title">Title</label>
-                <input type="text" name="title">
+                <input type="text" name="title" id="title">
                 <label for="name">Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" id="name">
                 <label for="songCount">SongCount</label>
-                <input type="text" name="songCount">
+                <input type="text" name="songCount" id="songCount">
                 <label for="length">length</label>
-                <input type="text" name="length">
+                <input type="text" name="length" id="length">
                 <label for="imgUrl">imgUrl</label>
-                <input for="text" name="imgUrl">
+                <input for="text" name="imgUrl" id="imgUrl">
                 <input type="submit" value="Add Album">
             </fieldset>
         </form>
