@@ -37,7 +37,7 @@ public class AlbumController {
 //        model.addAttribute("albumList", albums);
 //      list of Albums -> go find all the Albums and put them in my list "Album" -> give list to front-end and return it to specific template on line #44
         List<Album> album = albumRepository.findAll();
-        model.addAttribute("albums", album);
+        model.addAttribute("albumList", album);
 
         return "albums";
         // return "salmon-cookies/salmon-cookies-stores";
