@@ -1,6 +1,7 @@
 package com.example.songr.controllers;
 
 import com.example.songr.repository.AlbumRepository;
+import com.example.songr.repository.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,9 @@ public class AlbumController {
 
     @Autowired
     AlbumRepository albumRepository;
+
+    @Autowired
+    SongRepository songRepository;
 
 @GetMapping("/album")
     public String album(Model model){
