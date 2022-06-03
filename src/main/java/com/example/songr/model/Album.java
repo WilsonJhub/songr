@@ -1,6 +1,7 @@
 package com.example.songr.model;
 
 import javax.persistence.*;
+import java.util.List;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
@@ -18,7 +19,8 @@ public class Album {
     public double length;
     public String imgUrl;
 
-
+@OneToMany(mappedBy = "album")
+public List<Song> songToAlbum;
 
     public Album(){
 

@@ -13,3 +13,10 @@ Assisted by:
 
   Assisted by:
 - [Roger Reyes](https://github.com/RogerMReyes)
+
+-- -
+## Related Resources and Integration Testing
+
+Assisted by:
+- [Roger Reyes](https://github.com/RogerMReyes)
+- [Abdulahi Mohamud](https://github.com/AbdulahiMohamud)
